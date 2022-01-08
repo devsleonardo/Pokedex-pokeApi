@@ -3,10 +3,9 @@
 :host {
   form {
     .card {
-      width: calc(49% - 1.2rem);
-      height: rem-calc(200);
+      height: rem-calc(210);
       padding: rem-calc(40);
-      border-radius: rem-calc(20);
+      border-radius: rem-calc(15);
       margin-bottom: rem-calc(20);
     }
 
@@ -17,13 +16,29 @@
 
     .pokemon__image {
       position: absolute;
-      right: rem-calc(40);
+      right: rem-calc(35);
       bottom: rem-calc(30);
       display: flex;
       align-items: center;
       justify-content: center;
-      width: rem-calc(100);
-      height: rem-calc(100);
+      width: rem-calc(90);
+      height: rem-calc(90);
+      transition: transform 1s;
+      transform: translateX(0) scale(1);
+    }
+    .pokemon__image:hover {
+      transform: translateX(10px) scale(1.2);
+    }
+
+    .pokemon__image__2 {
+      position: absolute;
+      right: rem-calc(10);
+      bottom: rem-calc(170);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem-calc(32);
+      height: rem-calc(32);
     }
   }
 }

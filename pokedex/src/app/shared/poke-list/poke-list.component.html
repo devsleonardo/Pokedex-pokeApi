@@ -1,27 +1,33 @@
-<form action="">
+<!-- Search -->
+<app-poke-search (emmitSearch)="getSearch($event)"></app-poke-search>
+
+<form>
   <div class="container">
     <div class="row justify-content-evenly">
-      <div class="col-sm-5 card">
-        <a class="text-decoration-none text-dark" href=""
-          ><h2 class="col-sm-12 namePoke">Bulbasaro</h2></a
-        >
-        <div class="row"></div>
-        <small class="col-sm-3 mt-3 badge rounded-pill bg-light text-dark">Poison</small>
-        <small class="col-sm-3 mt-3 badge rounded-pill bg-light text-dark">Grass</small>
-        <a href=""
-          ><img src="../../../assets/Test.png" alt="Bulbasaro" class="mt-3 pokemon__image"
-        /></a>
-      </div>
-      <div class="col-sm-5 card">
-        <a class="text-decoration-none text-dark" href=""
-          ><h2 class="col-sm-12 namePoke">Bulbasaro</h2></a
-        >
-        <div class="row"></div>
-        <small class="col-sm-3 mt-3 badge rounded-pill bg-light text-dark">Poison</small>
-        <small class="col-sm-3 mt-3 badge rounded-pill bg-light text-dark">Grass</small>
-        <a href=""
-          ><img src="../../../assets/Test.png" alt="Bulbasaro" class="mt-3 pokemon__image"
-        /></a>
+      <div class="col-3 col-sm-3 mx-1 card" *ngFor="let pokemon of getAllPokemon">
+        <!--Condição pra renderizar informações-->
+        <div *ngIf="pokemon.status">
+          <a
+            class="text-decoration-none text-dark"
+            [routerLink]="['details', pokemon.status.id]"
+            ><h2 class="col-12 namePoke">{{ pokemon.name }}</h2></a
+          >
+          <small
+            class="col-3 me-2 mt-3 badge rounded-pill bg-dark"
+            *ngFor="let value of pokemon.status.types"
+            >{{ value.type.name }}</small
+          >
+          <a [routerLink]="['details', pokemon.status.id]"
+            ><img
+              [src]="pokemon.status.sprites.other.dream_world.front_default"
+              [alt]="pokemon.name"
+              class="mt-3 pokemon__image" />
+            <img
+              [src]="pokemon.status.sprites.other.home.front_default"
+              [alt]="pokemon.name"
+              class="mt-3 pokemon__image__2"
+          /></a>
+        </div>
       </div>
     </div>
   </div>

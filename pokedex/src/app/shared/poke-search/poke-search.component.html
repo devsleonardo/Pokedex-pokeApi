@@ -2,6 +2,8 @@
   <div class="input-group mb-5">
     <small class="input-group-text bg-white"><i class="fa fa-search"></i></small>
     <input
+      #input
+      (keyup)="search(input.value)"
       type="text"
       class="form-control shadow-lg p-3 bg-body"
       placeholder="Buscar Pokemon..." />
