@@ -1,0 +1,16 @@
+@import '../../../styles/rem-calc.scss';
+
+:host {
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+      background-image: url(../../../assets/icons/pokebola.gif);
+      background-repeat: no-repeat;
+      background-position: right calc(0.375em + 0.1875rem) center;
+      background-size: calc(1.5em + 1.5rem) calc(1.5em + 1.5rem);
+    }
+  }
+}

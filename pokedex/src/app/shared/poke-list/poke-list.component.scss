@@ -1,0 +1,29 @@
+@import '../../../styles/rem-calc.scss';
+
+:host {
+  form {
+    .card {
+      width: calc(49% - 1.2rem);
+      height: rem-calc(200);
+      padding: rem-calc(40);
+      border-radius: rem-calc(20);
+      margin-bottom: rem-calc(20);
+    }
+
+    .namePoke {
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .pokemon__image {
+      position: absolute;
+      right: rem-calc(40);
+      bottom: rem-calc(30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: rem-calc(100);
+      height: rem-calc(100);
+    }
+  }
+}
