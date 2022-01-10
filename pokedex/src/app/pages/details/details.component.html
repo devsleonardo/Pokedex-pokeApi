@@ -1,4 +1,47 @@
 <!-- Header -->
 <app-poke-header></app-poke-header>
 
-<main></main>
+<main>
+  <ng-template [ngIf]="isLoading">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-sm-6 align-self-center">
+          <form>
+            <section class="card pokemon__names">
+              <h1 class="namePoke text-center py-2">{{ pokemon[0].name }}</h1>
+              <div class="mb-4">
+                <small
+                  class="col-3 me-2 mt-3 badge rounded-pill bg-dark"
+                  *ngFor="let value of pokemon[0].types"
+                  >{{ value.type.name }}</small
+                >
+              </div>
+
+              <img
+                class="pokemon__image"
+                [src]="pokemon[0].sprites.other.dream_world.front_default"
+                [alt]="pokemon[0].name" />
+              <img
+                class="pokemon__image2"
+                [src]="pokemon[0].sprites.other.home.front_default"
+                alt="pokemon[0].name" />
+              <h2 class="mb-4 fw-bold text-danger">Estatísticas</h2>
+
+              <li class="mb-3" *ngFor="let value of pokemon[0].stats">
+                {{ value.stat.name }}:
+
+                <strong>
+                  {{ value.base_stat }}
+                </strong>
+              </li>
+            </section>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+              <a [routerLink]="['']" class="btn btn-danger col-6 mx-auto">Voltar</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</main>

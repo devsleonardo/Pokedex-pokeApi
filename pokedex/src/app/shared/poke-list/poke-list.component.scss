@@ -3,26 +3,28 @@
 :host {
   form {
     .card {
-      height: rem-calc(210);
+      height: rem-calc(150);
       padding: rem-calc(40);
-      border-radius: rem-calc(15);
-      margin-bottom: rem-calc(20);
+      border-radius: rem-calc(10);
+      margin-bottom: rem-calc(10);
     }
 
     .namePoke {
       font-weight: bold;
       font-style: italic;
+      font-size: rem-calc(25);
+      margin-top: rem-calc(60);
     }
 
     .pokemon__image {
       position: absolute;
-      right: rem-calc(35);
-      bottom: rem-calc(30);
+      right: rem-calc(65);
+      bottom: rem-calc(60);
       display: flex;
       align-items: center;
       justify-content: center;
-      width: rem-calc(90);
-      height: rem-calc(90);
+      width: rem-calc(75);
+      height: rem-calc(75);
       transition: transform 1s;
       transform: translateX(0) scale(1);
     }
@@ -33,7 +35,7 @@
     .pokemon__image__2 {
       position: absolute;
       right: rem-calc(10);
-      bottom: rem-calc(170);
+      bottom: rem-calc(110);
       display: flex;
       align-items: center;
       justify-content: center;
