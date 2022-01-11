@@ -14,6 +14,7 @@ public allPoke: number = 100;     //Número de itens por pagina
 
 ## Modelo da aplicação
 
-![alt text](https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/homeList.jpeg)
-![alt text](https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/filtro.jpeg)
-![alt text](https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/details.jpeg)
+ <img src="https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/homeList.jpeg" alt="homeList" width="800 " height="600"/>
+ <img src="https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/filtro.jpeg" alt="homeList" width="800 " height="600"/>
+ <img src="https://github.com/devsleonardo/Pokedex/blob/main/pokedex/src/assets/img/details.jpeg" alt="homeList" width="800 " height="600"/>
+
