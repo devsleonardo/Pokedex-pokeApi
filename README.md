@@ -12,6 +12,9 @@ public allPoke: number = 100;     //Número de itens por pagina
 
 ```
 
+Para visualizar detalhes do pokemon somente via node,  [experimente um pouco da Aplicação](http://pokedex-v2.s3-website-sa-east-1.amazonaws.com/)
+
+
 ### Instalação
 Você precisa ter esse repositório, é simples, rode os comandos abaixo, em caso de erros, rode como sudo/administrador.
 
